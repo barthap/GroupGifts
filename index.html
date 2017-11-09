@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Składanie się na prezenty</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        .row.content {
+            height: 1000px;
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+                max-width: 500px;
+            }
+            .row.content {height: auto;}
+        }
+    </style>
+    <script src="logic.js"></script>
+    <script src="main-ui.js"> </script>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row content">
+        <section class="col-sm-4 sidenav">
+            <h4>Lista osób <button class="btn btn-default btn-xs" id="btnClear">Wyczyść</button></h4>
+            <ul class="list-group" id="listaOsob" style="margin-bottom: 5px;">
+
+            </ul>
+            <section class="form-group" id="edit-buttons">
+                <small>Zaznaczone:</small>
+                <button id="edytuj" class="btn btn-default" type="button"><span class="glyphicon glyphicon-pencil"></span>  Edytuj</button>
+                <button id="usun" class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span> Usuń</button>
+            </section>
+            <section>
+            <h4><small>DODAJ OSOBĘ</small></h4>
+            <form class="form-inline">
+                <div class="form-group">
+                    <input type="text" name="imie" class="form-control" placeholder="Imie..">
+                    <div class="input-group">
+                        <input type="text" name="ile" class="form-control" placeholder="Ile zaplacil..">
+                        <div class="input-group-addon">zł</div>
+                    </div>
+
+                    <button id="dodajBtn" class="btn btn-default" type="button">
+                        <span class="glyphicon glyphicon-plus"></span> Dodaj
+                    </button>
+
+                </div>
+            </form></section>
+            <section style="margin-top: 30px; color:#555;">
+                <p>
+                   Podpowiedź:<br>
+                       Kliknij dwukrotnie na imię, aby edytować.
+                </p>
+            </section>
+        </section>
+
+        <section class="col-sm-8">
+            <h2>WYNIKI</h2>
+                <h3><small>Liczba osób: <span id="ppl-count"></span></small></h3>
+                <h3><small> Suma: <span id="total"></span></small></h3>
+                <h3><small> Składamy się po: <span id="ratio"></span> na osobę</small></h3>
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Kto daje</th>
+                        <th>Komu daje</th>
+                        <th>Ile daje</th>
+                    </tr>
+                    </thead>
+                    <tbody id="result-table"></tbody>
+                </table>
+
+                <div id="results"></div>
+        </section>
+    </div>
+</div>
+
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Edytuj</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">Imie:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="how-much" class="control-label">Ile zaplacil:</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="how-much">
+                            <div class="input-group-addon">zł</div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="delete">Usuń</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+                <button type="button" class="btn btn-primary" id="save-edit">Zapisz</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
