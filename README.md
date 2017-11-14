@@ -7,7 +7,7 @@ It has two versions:
 -Web (jQuery)
 -C# .NET Windows Forms
 
-I also wrote it just for practise in C++ and Python
+I also wrote it just for practise in C++, Java and Python
 
 TO DO:
 Rewrite everything to English and improve coding practices
