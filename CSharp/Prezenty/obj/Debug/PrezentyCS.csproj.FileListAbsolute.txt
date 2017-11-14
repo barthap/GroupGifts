@@ -1,9 +1,0 @@
-E:\Programowanie\Projects\Snippets\Prezenty\Prezenty\bin\Debug\Prezenty.exe.config
-E:\Programowanie\Projects\Snippets\Prezenty\Prezenty\bin\Debug\Prezenty.exe
-E:\Programowanie\Projects\Snippets\Prezenty\Prezenty\bin\Debug\Prezenty.pdb
-E:\Programowanie\Projects\Snippets\Prezenty\Prezenty\obj\Debug\PrezentyCS.csprojResolveAssemblyReference.cache
-E:\Programowanie\Projects\Snippets\Prezenty\Prezenty\obj\Debug\Prezenty.Form1.resources
-E:\Programowanie\Projects\Snippets\Prezenty\Prezenty\obj\Debug\Prezenty.Properties.Resources.resources
-E:\Programowanie\Projects\Snippets\Prezenty\Prezenty\obj\Debug\PrezentyCS.csproj.GenerateResource.Cache
-E:\Programowanie\Projects\Snippets\Prezenty\Prezenty\obj\Debug\Prezenty.exe
-E:\Programowanie\Projects\Snippets\Prezenty\Prezenty\obj\Debug\Prezenty.pdb
